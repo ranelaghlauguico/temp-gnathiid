@@ -1,0 +1,66 @@
+---
+title: "The Effect of Temperature on Development and Behavior of Fish-Parasitic Gnathiid Isopods in the Eastern Caribbean Sea"
+author: "Ranelagh Yzabelle Lauguico"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Climate change, driven by anthropogenic greenhouse gas emissions, has significantly increased the Earth’s temperature. According to NOAA’s Global Climate Report, 2023 was the warmest year on record, exceeding the previous record from 2017 and continuing a decade of unprecedented global temperatures (Lindsey and Dahlman, 2024; NCEI, 2024).
+
+Ocean temperatures have risen alongside atmospheric temperatures, with the global ocean absorbing roughly 93% of excess heat (Poloczanska et al., 2016; Johnson and Lyman, 2020). Ocean warming has widespread effects on marine ecosystems influencing organismal physiology, behavior and life histories (Doney et al., 2012; Nagelkerken and Munday, 2016; Payne et al., 2016). While gradual increases (“press warming”) have long been the focus, rapid, episodic climatic events (“pulse warming”) such as marine heatwaves can disrupt ecological dynamics over days to weeks- often beyond organisms’ adaptive capacities. These acute events can alter metabolic performance, suppress immune function and increase disease susceptibility across taxa (Claar and Wood, 2020)
+
+Parasites, which comprise approximately 40% of Earth’s biodiversity, are strongly influenced by temperature due to their ectothermic physiology and temperature-dependent development and transmission (Hatcher and Dunn, 2011; Cizauskas et al., 2017; Sikkel and Welicky, 2019). Pulse warming events may therefore rapidly shift host-parasite dynamics by accelerating parasite development or weakening host defenses (Claar and Wood, 2020). Despite their diversity and ecological importance, marine parasites remain underrepresented in climate-change research, leaving key mechanisms unresolved.
+
+Gnathiid isopods are one of the most prevalent external parasites of reef fishes and play a significant ecological role in ecosystem functioning via host interactions (Sikkel and Welicky, 2019). These small (0.5-3 mm), highly mobile organisms have wide-ranging impacts on their hosts at the physiological, behavioral and community levels (Sikkel et al., 2014; Sikkel and Welicky., 2019). The effects of gnathiid infestation on hosts vary widely depending on the host species, parasite load, infestation duration and host resilience (Bunkley-Williams and Williams 1998; Jones and Grutter, 2005). Such parasitic relationships are recognized as fundamental interactions in the marine ecosystem and biodiversity (Lafferty, 2013). Despite their ubiquity and significance, only a few studies have examined the effects of warming on gnathiid isopods. Elevated temperatures have been shown to impair gnathiid survival (Shodipo et al., 2020) and accelerated development has been proposed as a possible consequence of warming (Sikkel et al., 2019), though this has not been directly tested. To date, studies specifically examining how elevated temperature affects host-finding behavior do not exist, representing a key knowledge gap.
+
+This study investigates how temperature influences development, survivorship and host-finding behavior in a common Caribbean gnathiid, Gnathia marleyi. Development and survivorship were quantified through laboratory rearing experiments, while host-finding behavior was assessed using behavioral trials conducted with a newly developed olfactometer. These results provide insight into the thermal sensitivity of this widespread parasite and its potential ecological role under future ocean-warming scenarios.
+
+![**Figure 1.** Life cycle of gnathiid isopods. Z1–Z3 refers to first, second, and third-stage unfed, juvenile gnathiids. P1–P3 refers to first, second, and third stage fed, juvenile gnathiids (Hendrick et al., 2023)](visualization/Life-cycle-of-gnathiid-isopods-Z1-Z3-refers-to-first-second-and-third-stage-unfed.png){fig-align="center"}
+
+## Overview
+
+This project uses two datasets — unfed gnathiid stages (ZA, ZB) and fed stages (PA, PB) — to explore how temperature and feeding affect body size and stomach width in fish-parasitic gnathiid isopods. The Lifecycle_Growth dataset includes measurements of head width and
+body length for early, unfed stages (ZA, ZB). The Fed_gnathiids
+dataset includes later, fed stages (PA, PB), and also contains stomach
+width measurements that indicate how much blood has been ingested.
+
+There is a strong, stage-specific relationship between body size and stomach width in fed gnathiids. Stomach width increases with body length, but the scaling is non-linear and differs markedly between developmental stages. PA individuals (purple) occupy a smaller size range and show moderate increases in stomach width as body length increases. In contrast, PB individuals (yellow) are larger overall and display a steep rise in stomach width with increasing body length, reflecting a substantial increase in feeding capacity at this later stage. The smoothed trend lines demonstrate that stomach expansion accelerates once individuals transition from PA to PB, suggesting a developmental threshold after which gnathiids can ingest and store significantly larger volumes of blood.
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+
+
+library(tidyverse)
+library(ggplot2)
+
+fed <- read_csv("data/Fed_gnathiids.csv") |>
+  mutate(
+    Stage  = factor(Stage, levels = c("PA", "PB"), ordered = TRUE),
+    Temp_C = factor(Temp_C)
+  )
+
+ggplot(fed,
+       aes(x = Body_length_mm,
+           y = Stomach_width_mm,
+           colour = Stage)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(se = FALSE) +
+  labs(
+    title = "Relationship Between Body Size and Stomach Width in Fed Gnathiids",
+    x = "Body length (mm)",
+    y = "Stomach width (mm)",
+    colour = "Stage"
+  )
+
+```
+
+## Methods
+
+```{r}
+#| echo: false
+2 * 2
+```
