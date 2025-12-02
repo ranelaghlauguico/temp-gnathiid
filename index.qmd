@@ -58,7 +58,7 @@ ggplot(fed,
 
 ```
 
-## Methods
+
 
 ```{r}
 #| echo: false
