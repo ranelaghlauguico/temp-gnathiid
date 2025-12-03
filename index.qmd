@@ -34,7 +34,9 @@ This project uses two datasets — unfed gnathiid stages (ZA, ZB) and fed stages
 #| warning: false
 #| echo: false
 #| fig-cap: "**Figure 2.** Body length of unfed (ZA, ZB) (Left) and fed (PA, PB) (Right) juvenile gnathiid stages across temperature treatments."
-
+#| fig-width: 12
+#| fig-height: 4
+#| fig-align: "center"
 
 library(tidyverse)
 library(patchwork)
