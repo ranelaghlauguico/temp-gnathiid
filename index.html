@@ -79,29 +79,66 @@ ul.task-list li input[type="checkbox"] {
 <p>This study investigates how temperature influences development, survivorship and host-finding behavior in a common Caribbean gnathiid, Gnathia marleyi. Development and survivorship were quantified through laboratory rearing experiments, while host-finding behavior was assessed using behavioral trials conducted with a newly developed olfactometer. These results provide insight into the thermal sensitivity of this widespread parasite and its potential ecological role under future ocean-warming scenarios.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="visualization/Life-cycle-of-gnathiid-isopods-Z1-Z3-refers-to-first-second-and-third-stage-unfed.png" class="img-fluid figure-img"></p>
+<p><img src="visualization/Life-cycle-of-gnathiid-isopods-Z1-Z3-refers-to-first-second-and-third-stage-unfed.png" class="img-fluid figure-img" width="531"></p>
 <figcaption><strong>Figure 1.</strong> Life cycle of gnathiid isopods. Z1–Z3 refers to first, second, and third-stage unfed, juvenile gnathiids. P1–P3 refers to first, second, and third stage fed, juvenile gnathiids (Hendrick et al., 2023)</figcaption>
 </figure>
 </div>
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project uses two datasets — unfed gnathiid stages (ZA, ZB) and fed stages (PA, PB) — to explore how temperature and feeding affect body size and stomach width in fish-parasitic gnathiid isopods. The Lifecycle_Growth dataset includes measurements of head width and body length for early, unfed stages (ZA, ZB). The Fed_gnathiids dataset includes later, fed stages (PA, PB), and also contains stomach width measurements that indicate how much blood has been ingested.</p>
-<p>There is a strong, stage-specific relationship between body size and stomach width in fed gnathiids. Stomach width increases with body length, but the scaling is non-linear and differs markedly between developmental stages. PA individuals (purple) occupy a smaller size range and show moderate increases in stomach width as body length increases. In contrast, PB individuals (yellow) are larger overall and display a steep rise in stomach width with increasing body length, reflecting a substantial increase in feeding capacity at this later stage. The smoothed trend lines demonstrate that stomach expansion accelerates once individuals transition from PA to PB, suggesting a developmental threshold after which gnathiids can ingest and store significantly larger volumes of blood.</p>
+<p><strong>Note on terminology used in this study.</strong> While the life-cycle stages shown in Figure 1 follow the nomenclature of Hendrick et al.&nbsp;(2023)—Z1, Z2, Z3 for unfed stages and P1–P3 for their corresponding fed (praniza) stages—this project uses a modified staging system for simplicity during data processing. Unfed stages are labeled as ZA and ZB (corresponding to Z1 and Z2–Z3), and fed praniza stages are categorized as PA and PB (corresponding to P1 and P2–P3).</p>
+<p>This project uses two datasets — unfed gnathiid stages (ZA, ZB) and fed stages (PA, PB) — to explore how temperature and feeding affect body size and stomach width in fish-parasitic gnathiid isopods. The Lifecycle_Growth dataset includes measurements of head width and body length for unfed (ZA, ZB) and fed (PA, PB) stages (in mm). The Fed_gnathiids dataset includes fed stages that has head width, body length and stomach width measurements that indicate how much blood has been ingested.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section"></h4>
 <div class="cell">
 <div class="cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption><strong>Figure 2.</strong> Body length of unfed (ZA, ZB) (Left) and fed (PA, PB) (Right) juvenile gnathiid stages across temperature treatments.</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>Body length increases across juvenile stages, with fed individuals (PA and PB) being larger overall than unfed individuals (ZA and ZB). This pattern reflects post-feeding growth. Temperature contributes to variation in size, but developmental stage and feeding status show the clearest differences.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption><strong>Figure 3.</strong> Relationship between body size and stomach width in fed gnathiids.</figcaption>
+</figure>
 </div>
 </div>
+</div>
+<p>As seen in Figure 3, there is a strong, stage-specific relationship between body size and stomach width in fed gnathiids. Stomach width increases with body length, but the scaling is non-linear and differs between developmental stages. PA individuals (purple) occupy a smaller size range and show moderate increases in stomach width as body length increases. In contrast, PB individuals (yellow) are larger overall and display a steep rise in stomach width with increasing body length, reflecting a substantial increase in feeding capacity at this later stage. The smoothed trend lines demonstrate that stomach expansion accelerates once individuals transition from PA to PB, suggesting a developmental threshold after which gnathiids can ingest and store larger volumes of blood.</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Bunkley-Williams, L., &amp; Williams, E. H. (1998). <em>Isopods associated with fishes: A synopsis and corrections.</em> Journal of Parasitology, 84, 893–899.</p>
+<p>Cizauskas, C. A., Carlson, C. J., Burgio, K. R., Clements, C. F., Dougherty, E. R., Harris, N. C., &amp; Phillips, A. J. (2017). Parasite vulnerability to climate change: An evidence-based functional trait approach. <em>Royal Society Open Science</em>, 4(1), 160535.</p>
+<p>Claar, D. C., &amp; Wood, C. L. (2020). Pulse heat stress and parasitism in a warming world. <em>Trends in Ecology &amp; Evolution</em>, 35(8), 704–715.</p>
+<p>Doney, S. C., Ruckelshaus, M., Duffy, J. E., et al.&nbsp;(2012). Climate change impacts on marine ecosystems. <em>Annual Review of Marine Science</em>, 4, 11–37.</p>
+<p>Hatcher, M. J., &amp; Dunn, A. M. (2011). <em>Parasites in Ecological Communities: From Interactions to Ecosystems.</em> Cambridge University Press.</p>
+<p>Johnson, G. C., &amp; Lyman, J. M. (2020). Warming trends increasingly dominate global ocean. <em>Nature Climate Change</em>, 10, 757–761.</p>
+<p>Jones, C. M., &amp; Grutter, A. S. (2005). Parasitic isopods reduce haematocrit in captive blackeye thicklip. <em>Journal of Fish Biology</em>, 66, 860–864.</p>
+<p>Lafferty, K. D. (2013). Marine biodiversity and parasitism. <em>Bulletin of Marine Science</em>, 89, 123–134.</p>
+<p>Lindsey, R., &amp; Dahlman, L. (2024). <em>Climate Change: Global Temperature.</em> NOAA Climate.gov.</p>
+<p>Nagelkerken, I., &amp; Munday, P. L. (2016). Animal behaviour shapes the ecological effects of ocean acidification and warming. <em>Global Change Biology</em>, 22, 974–989.</p>
+<p>National Centers for Environmental Information (NCEI). (2024). <em>Global Climate Report — Annual 2023.</em> NOAA.</p>
+<p>Payne, N. L., Smith, J. A., van der Meulen, D. E., et al.&nbsp;(2016). Temperature dependence of fish performance in the wild. <em>Functional Ecology</em>, 30, 903–912.</p>
+<p>Poloczanska, E. S., Burrows, M. T., Brown, C. J., et al.&nbsp;(2016). Responses of marine organisms to climate change across oceans. <em>Frontiers in Marine Science</em>, 3, 62.</p>
+<p>Shodipo, M. O., Duong, B., Graba-Landry, A., Grutter, A. S., &amp; Sikkel, P. C. (2020). Effect of acute seawater temperature increase on survival of a fish ectoparasite. <em>Oceans</em>, 1(1), 3.</p>
+<p>Sikkel, P. C., Richardson, M. A., Sun, D., et al.&nbsp;(2019). Changes in abundance of gnathiid isopods associated with bleaching events. <em>Coral Reefs</em>, 38, 1185–1194.</p>
+<p>Sikkel, P. C., Sears, W. T., Weldon, B., &amp; Tuttle, B. C. (2011). Host-finding mechanisms in a Caribbean gnathiid isopod. <em>Marine Biology</em>, 158, 1075–1083.</p>
+<p>Sikkel, P. C., &amp; Welicky, R. (2019). The ecological significance of parasitic crustaceans. In <em>Parasitic Crustacea: State of Knowledge</em> (pp.&nbsp;197–221).</p>
 </section>
 
 </main>
