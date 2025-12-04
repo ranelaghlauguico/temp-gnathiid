@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -27,14 +27,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -84,6 +85,16 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
+<section id="study-site" class="level2">
+<h2 class="anchored" data-anchor-id="study-site">Study Site</h2>
+<p>John Brewers Bay (18°20’ N, 64°58’ W), located on the west end of the island of St.&nbsp;Thomas, U.S. Virgin Islands has an area of 1.8km2 and depths ranging from 0-33.1 meters (Romero et al., 2021). It is bordered by the Cyril E. King Airport runway, Black Point on the north and a small lagoon on the south. It features a variety of habitats such as seagrass beds, patch reefs, fringing coral reefs and rocky reefs. These habitats support a range of reef-associated species, many of which serve as hosts for gnathiids. The accessibility and convenience of Brewers Bay allow for efficient gnathiid collection.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202025-12-03%20183704.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Figure 2.</strong> Map of study site at John Brewers Bay, St.&nbsp;Thomas, U.S. Virgin Islands</figcaption>
+</figure>
+</div>
+</section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p><strong>Note on terminology used in this study.</strong> While the life-cycle stages shown in Figure 1 follow the nomenclature of Hendrick et al.&nbsp;(2023)—Z1, Z2, Z3 for unfed stages and P1–P3 for their corresponding fed (praniza) stages—this project uses a modified staging system for simplicity during data processing. Unfed stages are labeled as ZA and ZB (corresponding to Z1 and Z2–Z3), and fed praniza stages are categorized as PA and PB (corresponding to P1 and P2–P3).</p>
@@ -119,6 +130,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>This project used juvenile gnathiid isopod data to visualize how temperature affects body size and development. Unfed stages (ZA, ZB) and fed stages (PA, PB) were compared across 27°C and 30°C treatments. Body length was generally greater at 27°C, suggesting reduced growth under warmer conditions. Fed stages were larger overall, and stomach width increased with body size.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
@@ -194,13 +206,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

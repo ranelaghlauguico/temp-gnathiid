@@ -19,6 +19,12 @@ This study investigates how temperature influences development, survivorship and
 
 ![**Figure 1.** Life cycle of gnathiid isopods. Z1–Z3 refers to first, second, and third-stage unfed, juvenile gnathiids. P1–P3 refers to first, second, and third stage fed, juvenile gnathiids (Hendrick et al., 2023)](visualization/Life-cycle-of-gnathiid-isopods-Z1-Z3-refers-to-first-second-and-third-stage-unfed.png){fig-align="center" width="531"}
 
+## Study Site
+
+John Brewers Bay (18°20’ N, 64°58’ W), located on the west end of the island of St. Thomas, U.S. Virgin Islands has an area of 1.8km2 and depths ranging from 0-33.1 meters (Romero et al., 2021). It is bordered by the Cyril E. King Airport runway, Black Point on the north and a small lagoon on the south. It features a variety of habitats such as seagrass beds, patch reefs, fringing coral reefs and rocky reefs. These habitats support a range of reef-associated species, many of which serve as hosts for gnathiids. The accessibility and convenience of Brewers Bay allow for efficient gnathiid collection.
+
+![**Figure 2.** Map of study site at John Brewers Bay, St. Thomas, U.S. Virgin Islands](images/Screenshot%202025-12-03%20183704.png){fig-align="center"}
+
 ## Overview
 
 **Note on terminology used in this study.** While the life-cycle stages shown in Figure 1 follow the nomenclature of Hendrick et al. (2023)—Z1, Z2, Z3 for unfed stages and P1–P3 for their corresponding fed (praniza) stages—this project uses a modified staging system for simplicity during data processing. Unfed stages are labeled as ZA and ZB (corresponding to Z1 and Z2–Z3), and fed praniza stages are categorized as PA and PB (corresponding to P1 and P2–P3).
@@ -103,7 +109,7 @@ As seen in Figure 3, there is a strong, stage-specific relationship between body
 
 ## Summary
 
-
+This project used juvenile gnathiid isopod data to visualize how temperature affects body size and development. Unfed stages (ZA, ZB) and fed stages (PA, PB) were compared across 27°C and 30°C treatments. Body length was generally greater at 27°C, suggesting reduced growth under warmer conditions. Fed stages were larger overall, and stomach width increased with body size.
 
 ## References
 
